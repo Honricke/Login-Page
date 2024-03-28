@@ -1,45 +1,68 @@
-Sistema de Login com React.js, Flask e PostgreSQL
-Este é um projeto simples que demonstra um sistema de login desenvolvido usando React.js para o frontend, Flask para o backend e PostgreSQL como banco de dados.
+# Sistema de Login utilizando React.js, Flask e PostgreSQL
 
-Configuração
-Backend (Flask)
-Certifique-se de ter Python instalado.
+Este repositório contém o código fonte de um sistema de login desenvolvido utilizando React.js no frontend, Flask no backend e PostgreSQL como banco de dados. O sistema permite que os usuários se cadastrem, façam login e acessem uma área restrita.
 
-Instale as dependências do Python:
+## Tecnologias Utilizadas
 
-Copy code
-pip install -r requirements.txt
-Configure as variáveis de ambiente no arquivo .env ou diretamente no arquivo config.py.
+- **React.js**: Uma biblioteca JavaScript para construir interfaces de usuário.
+- **Flask**: Um framework de desenvolvimento web em Python.
+- **PostgreSQL**: Um sistema de gerenciamento de banco de dados relacional.
 
-Inicie o servidor Flask:
+## Pré-requisitos
 
-Copy code
-flask --app app run
-Banco de Dados (PostgreSQL)
-Certifique-se de ter o PostgreSQL instalado.
-Crie um banco de dados PostgreSQL.
-Atualize as configurações do banco de dados no arquivo config.py no diretório backend.
-Frontend (React.js)
-Certifique-se de ter o Node.js e o npm instalados.
+Antes de começar, certifique-se de ter instalado:
 
-Instale as dependências do frontend:
+- Node.js e npm (gerenciador de pacotes do Node.js)
+- Python
+- PostgreSQL
 
-bash
-Copy code
+## Configuração
+
+1. **Clonar o repositório:**
+git clone [https://github.com/seu-usuario/nome-do-repositorio.git](https://github.com/Honricke/Login-System)
+
+
+2. **Instalar as dependências do frontend:**
 cd frontend
 npm install
-Inicie o servidor de desenvolvimento:
 
-sql
-Copy code
-npm start
-Abra o navegador e acesse http://localhost:3000.
 
-Contribuindo
-Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue ou enviar um pull request.
+3. **Instalar as dependências do backend:**
+cd backend
+pip install -r requirements.txt
 
-Licença
-Este projeto é distribuído sob a Licença MIT. Consulte o arquivo LICENSE para obter mais detalhes.
 
-Contato
-Para mais informações, entre em contato via e-mail: henriquebandeira307@gmail.com.
+4. **Configurar o banco de dados:**
+
+- Crie um banco de dados PostgreSQL.
+- Atualize as configurações do banco de dados no arquivo `config.py` no diretório `backend`.
+
+5. **Executar a aplicação:**
+
+- No diretório `frontend`, execute:
+
+  ```
+  npm start
+  ```
+
+- No diretório `backend`, execute:
+
+  ```
+  python app.py
+  ```
+
+6. **Acesse a aplicação:**
+
+Abra um navegador e acesse `http://localhost:3000`.
+
+## Contribuindo
+
+Contribuições são bem-vindas! Se você encontrar algum problema ou tiver sugestões para melhorias, por favor, abra uma *issue* ou envie um *pull request*.
+
+## Licença
+
+Este projeto está licenciado sob a Licença MIT. Consulte o arquivo `LICENSE` para obter mais detalhes.
+
+## Contato
+
+Para mais informações ou dúvidas, entre em contato via e-mail: henriquebandeira307@gmail.com.
