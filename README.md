@@ -48,7 +48,7 @@ pip install -r requirements.txt
 - No diretório `backend`, execute:
 
   ```
-  python app.py
+  flask --app app run --debug
   ```
 
 6. **Acesse a aplicação:**
