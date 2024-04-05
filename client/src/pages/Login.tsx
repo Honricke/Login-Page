@@ -1,14 +1,34 @@
 import { useForm, Controller, SubmitHandler } from "react-hook-form";
 import { TextField, Button } from "@mui/material";
 import loginBG from "../assets/loginBG.png";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
+import { Link } from "react-router-dom";
 
 interface FormType {
   email: string;
   pass: string;
 }
 
+const schema = yup.object({
+  email: yup
+    .string()
+    .required("Insira seu email")
+    .email("Insira um email válido"),
+  pass: yup
+    .string()
+    .required("Insira sua senha")
+    .min(6, "A senha deve ter pelo menos 6 dígitos"),
+});
+
 function Login() {
-  const { handleSubmit, control } = useForm<FormType>();
+  const {
+    handleSubmit,
+    control,
+    formState: { errors },
+  } = useForm<FormType>({
+    resolver: yupResolver(schema),
+  });
   const onSubmit: SubmitHandler<FormType> = (data) => console.log(data);
 
   return (
@@ -46,12 +66,12 @@ function Login() {
             defaultValue=""
             render={({ field: { value, onChange } }) => (
               <TextField
-                id="inputEmail"
+                error={errors.email ? true : false}
+                helperText={errors.email?.message}
                 value={value}
                 onChange={onChange}
                 label="Email"
                 variant="outlined"
-                type="email"
               />
             )}
           />
@@ -61,7 +81,8 @@ function Login() {
             defaultValue=""
             render={({ field: { value, onChange } }) => (
               <TextField
-                id="inputEmail"
+                error={errors.pass ? true : false}
+                helperText={errors.pass?.message}
                 value={value}
                 onChange={onChange}
                 label="Password"
@@ -84,9 +105,10 @@ function Login() {
               Forgot Password?
             </a>
             <p style={{ fontSize: "0.8em", color: "#777", margin: 0 }}>
-              Don't have an account? <a href="">Sign Up</a>
+              Don't have an account? <Link to={"/register"}>Sign Up</Link>
             </p>
           </div>
+          {errors.root && <p>{errors.root?.message}</p>}
         </form>
       </div>
     </div>
