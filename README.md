@@ -59,10 +59,6 @@ Abra um navegador e acesse `http://localhost:3000`.
 
 Contribuições são bem-vindas! Se você encontrar algum problema ou tiver sugestões para melhorias, por favor, abra uma *issue* ou envie um *pull request*.
 
-## Licença
-
-Este projeto está licenciado sob a Licença MIT. Consulte o arquivo `LICENSE` para obter mais detalhes.
-
 ## Contato
 
 Para mais informações ou dúvidas, entre em contato via e-mail: henriquebandeira307@gmail.com.
